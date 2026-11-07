@@ -7,4 +7,5 @@ export const SPOTIFY_CONFIG = {
   AUTH_ENDPOINT: 'https://accounts.spotify.com/authorize',
   TOKEN_ENDPOINT: 'https://accounts.spotify.com/api/token',
   PLAYBACK_ENDPOINT: 'https://api.spotify.com/v1/me/player/play',
+  PAUSE_ENDPOINT: 'https://api.spotify.com/v1/me/player/pause',
 };

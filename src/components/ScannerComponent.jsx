@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Html5Qrcode } from 'html5-qrcode';
 
-export default function ScannerComponent () {
+export default function ScannerComponent ({ onScanSuccess }) {
 
     const scannerId = "html5qr-code-region";
     const html5QrcodeRef = useRef(null);
