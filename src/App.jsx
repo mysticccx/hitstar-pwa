@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useSpotifyAuth } from './hooks/useSpotifyAuth';
 import { useSpotifyPlayer } from './hooks/useSpotifyPlayer';
+import ScannerComponent from './components/ScannerComponent';
+import { fetchSongMetadata, playSpotifyTrack } from './services/playbackService';
 
 function App() {
   const { token, login, loading: authLoading } = useSpotifyAuth();
@@ -8,13 +10,28 @@ function App() {
 
   const [view, setView] = useState('home');
   const [scannedSong, setScannedSong] = useState(null);
+  const [playbackError, setPlaybackError] = useState(null);
 
-  const handleSongScanned = (songData) => {
-    setScannedSong(songData);
-    setView('reveal'); // Automatisch zur Song-Anzeige wechseln
-    // TODO: nur reveal bei click auf song player
+  const handleSongScanned = async (cardId) => {
+    setPlaybackError(null);
+    try {
+      const songData = fetchSongMetadata(cardId);
+      setScannedSong(songData);
+
+      await playSpotifyTrack(token, songData.spotify_id, deviceId);
+
+    } catch (error) {
+      console.error("Fehler im Spielablauf:", error);
+      setPlaybackError("Song konnte nicht geladen oder abgespielt werden.");
+      setView('home'); // Bei Fehler zurück zum Start
+    }
+    
   };
 
+  /**
+   * Spiel laden Screen
+   * während initialisierung des Auth-Prozessses
+   */
   if (authLoading) {
     return (
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
@@ -25,6 +42,10 @@ function App() {
     );
   }
 
+  /**
+   * Auth Screen
+   * um Spotify zu verbinden
+   */
   if (!token) {
     return (
       <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center p-4">
@@ -46,12 +67,22 @@ function App() {
     );
   }
 
+  /**
+   * Hauptseiten
+   * nach autorisierung und Laden
+   */
   return (
     <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center p-4">
       {/* Kleiner Status-Indikator oben */}
       <div className="absolute top-4 right-4 bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-500/20">
         ✓ Spotify aktiv
       </div>
+
+      {playbackError && (
+        <div className="bg-rose-500/20 text-rose-400 border border-rose-500/30 px-4 py-2 rounded-xl mb-4 text-sm">
+          ⚠️ {playbackError}
+        </div>
+      )}
 
       {/* ANSICHT A: STARTBILDSCHIRM */}
       {view === 'home' && (
@@ -64,7 +95,7 @@ function App() {
             onClick={() => setView('scanner')}
             className="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-4 px-6 rounded-full shadow-lg transform active:scale-95 transition-all text-lg"
           >
-            📸 Karte scannen
+            {playerReady ? "📸 Karte scannen" : "⌛ Player startet..."}
           </button>
         </div>
       )}
@@ -75,11 +106,7 @@ function App() {
           <h2 className="text-xl font-bold text-slate-300">Code scannen</h2>
           
           <div className="w-full aspect-square bg-slate-800 rounded-3xl overflow-hidden border-4 border-emerald-500 shadow-inner flex items-center justify-center">
-            {/* Hier binden wir gleich den Scanner ein */}
-            <p className="text-slate-500 text-sm px-4 text-center">
-              [Hier wird die ScannerComponent gerendert]
-            </p>
-            {/* <ScannerComponent token={token} onScanSuccess={handleSongScanned} /> */}
+            <ScannerComponent token={token} onScanSuccess={handleSongScanned} />
           </div>
 
           <button
