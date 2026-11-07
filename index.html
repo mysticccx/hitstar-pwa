@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Das Icon für den Browsertab (liegt im public-Ordner) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Hitster QR Player</title>
+
+    <!-- PWA Web-Manifest einbinden (liegt im public-Ordner) -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#1DB954" />
+
+    <!-- Das offizielle Spotify Web Playback SDK laden -->
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script>
+      // empty init so the web sdk doesnt complain
+      window.onSpotifyWebPlaybackSDKReady = window.onSpotifyWebPlaybackSDKReady || function() {};
+    </script>
+  </head>
+  <body class="bg-slate-900">
+    
+    <!-- Der wichtigste Knotenpunkt: Hier injiziert React das komplette UI -->
+    <div id="root"></div>
+
+    <!-- Verbindung zum JavaScript-Einstiegspunkt (Vite verlangt type="module") -->
+    <script type="module" src="./src/main.jsx"></script>
+
+  </body>
+</html>
