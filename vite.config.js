@@ -11,5 +11,14 @@ export default defineConfig({
         allowedHosts: [
           'hitstar-pwa.test',
         ],
+
+        // api calls of vercel
+        proxy: {
+          '/api': {
+            target: 'http://localhost:3001',
+            changeOrigin: true,
+            secure: false,
+          }
+        },
     },
 })
