@@ -11,6 +11,7 @@ function App() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [view, setView] = useState('home');
   const [scannedSong, setScannedSong] = useState(null);
+  const [isPlaybackLoading, setIsPlaybackLoading] = useState(false);
   const [playbackError, setPlaybackError] = useState(null);
 
   const handleSongScanned = async (cardId) => {
@@ -20,18 +21,21 @@ function App() {
 
     setIsProcessing(true);
     setPlaybackError(null);
+    setIsPlaybackLoading(true); 
 
     try {
       const songData = await fetchSongMetadata(cardId);
       setScannedSong(songData);
-
+      
       await playSpotifyTrack(token, songData.spotify_id, deviceId);
+
       setView('guess');
     } catch (error) {
       console.error("Fehler im Spielablauf:", error);
       setPlaybackError(error.message || "Unerwarteter Fehler beim Abspielen.");
       setView('home'); // Bei Fehler zurück zum Start
     } finally {
+      setIsPlaybackLoading(false);
       setIsProcessing(false);
     }
     
@@ -105,21 +109,43 @@ function App() {
         </div>
       )}
 
+      {isPlaybackLoading && (
+        <div className="fixed inset-0 bg-slate-900/90 backdrop-blur-sm z-50 flex flex-col items-center justify-center space-y-4 animate-fade-in">
+          {/* Ein schicker, rotierender Ladekreis in Spotify-Grün */}
+          <div className="w-16 h-16 border-4 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin"></div>
+          <div className="text-center space-y-1">
+            <h3 className="text-xl font-bold text-white">Lied wird geladen...</h3>
+            <p className="text-sm text-slate-400">Musik wird im Hintergrund gestartet.</p>
+          </div>
+        </div>
+      )}
+
       {/* ANSICHT A: STARTBILDSCHIRM */}
       {view === 'home' && (
-        <div className="text-center space-y-6 max-w-sm">
-          <h1 className="text-4xl font-extrabold text-slate-100">Bereit für die Karte?</h1>
+        <div className="text-center space-y-6 max-w-sm animate-fade-in">
+          {/* Der Titel wechselt dynamisch */}
+          <h1 className="text-4xl font-extrabold text-slate-100">
+            {playerReady ? "Bereit für die Karte?" : "Spiel lädt..."}
+          </h1>
+          
+          {/* Der Beschreibungstext wechselt dynamisch */}
           <p className="text-slate-400 text-sm">
-            Klicke auf den Button und halte die Kamera über den QR-Code deiner Spielkarte.
+            {playerReady 
+              ? "Klicke auf den Button und halte die Kamera über den QR-Code deiner Spielkarte."
+              : "Verbinde mit Spotify, dann kann es sofort losgehen!"}
           </p>
+
+        {/* Der Button wird NUR gerendert, wenn der Player bereit ist */}
+        {playerReady && (
           <button
             onClick={() => setView('scanner')}
             className="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-4 px-6 rounded-full shadow-lg transform active:scale-95 transition-all text-lg"
           >
-            {playerReady ? "Karte scannen" : "Lade Player..."}
+            📸 Karte scannen
           </button>
-        </div>
-      )}
+        )}
+      </div>
+    )}
 
       {/* ANSICHT B: SCANNER-OBERFLÄCHE */}
       {view === 'scanner' && (
