@@ -17,9 +17,21 @@ export default function ScannerComponent ({ onScanSuccess }) {
             qrbox: { width: 250, height: 250 },
         };
 
-        const handleSuccess = (decodedText) => {
-            console.log("Erfolgreich gescannt:", decodedText);
-            onScanSuccess(decodedText);
+        const handleSuccess = async (decodedText) => {
+            if (html5Qrcode.isScanning) {
+                try {
+                    await html5Qrcode.stop();
+                    console.log("Kamera vorab erfolgreich gestoppt. CPU ist frei.");
+                    
+                    // when camera is off, send decodedText
+                    console.log("Erfolgreich gescannt:", decodedText);
+                    onScanSuccess(decodedText);
+                } catch (err) {
+                    console.error("Fehler beim sofortigen Kamera-Stopp:", err);
+                    // Fallback: if stop doesnt work, still send decodedText
+                    onScanSuccess(decodedText);
+                }
+            }
         };
 
         // on scan failed
