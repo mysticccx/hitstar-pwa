@@ -97,7 +97,7 @@ function App() {
    * nach autorisierung und Laden
    */
   return (
-    <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center p-4">
+    <div className="min-h-[100dvh] bg-slate-900 text-white flex flex-col items-center justify-center p-4">
       {/* Kleiner Status-Indikator oben */}
       <div className="absolute top-4 right-4 bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-500/20">
         ✓ Spotify aktiv
