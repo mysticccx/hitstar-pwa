@@ -17,27 +17,11 @@ export async function fetchSongMetadata(cardId) {
   return response.json();
 }
 
-async function transferSpotifyPlayback(accessToken, deviceId) {
-  await fetch('https://api.spotify.com/v1/me/player', {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${accessToken}`,
-    },
-    body: JSON.stringify({
-      device_ids: [deviceId], // Array mit deiner neuen virtuellen PWA-Device-ID
-      play: false,            // Wechselt nur das Gerät, startet noch nicht die Musik
-    }),
-  });
-}
-
 export async function playSpotifyTrack(accessToken, spotifyTrackId, deviceId) {
 
   if (!deviceId) {
     throw new Error("Keine Device-ID vom Spotify-SDK empfangen.");
   }
-
-  await transferSpotifyPlayback(accessToken, deviceId);
 
   const url = deviceId 
     ? `${SPOTIFY_CONFIG.PLAYBACK_ENDPOINT}?device_id=${deviceId}`
@@ -59,10 +43,6 @@ export async function playSpotifyTrack(accessToken, spotifyTrackId, deviceId) {
   if (response.status !== 204 && !response.ok) {
     throw new Error(`Spotify Playback Fehler: ${response.status}`);
   }
-
-  if (response.status !== 204 && !response.ok) {
-    throw new Error(`Spotify Playback Fehler: ${response.status}`);
-  }
 }
 
 export async function pauseSpotifyTrack(accessToken, deviceId) {
@@ -70,8 +50,6 @@ export async function pauseSpotifyTrack(accessToken, deviceId) {
   if (!deviceId) {
     throw new Error("Keine Device-ID vom Spotify-SDK empfangen.");
   }
-
-  await transferSpotifyPlayback(accessToken, deviceId);
 
   const url = deviceId 
     ? `${SPOTIFY_CONFIG.PAUSE_ENDPOINT}?device_id=${deviceId}`
@@ -84,10 +62,6 @@ export async function pauseSpotifyTrack(accessToken, deviceId) {
       'Authorization': `Bearer ${accessToken}`,
     },
   });
-
-  if (response.status !== 204 && !response.ok) {
-    throw new Error(`Spotify Playback Fehler: ${response.status}`);
-  }
 
   if (response.status !== 204 && !response.ok) {
     throw new Error(`Spotify Playback Fehler: ${response.status}`);

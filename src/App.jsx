@@ -8,12 +8,19 @@ function App() {
   const { token, login, loading: authLoading } = useSpotifyAuth();
   const { player, deviceId, isReady: playerReady } = useSpotifyPlayer(token);
 
+  const [isProcessing, setIsProcessing] = useState(false);
   const [view, setView] = useState('home');
   const [scannedSong, setScannedSong] = useState(null);
   const [playbackError, setPlaybackError] = useState(null);
 
   const handleSongScanned = async (cardId) => {
+
+    // block any second handleSongScanned call
+    if (isProcessing) return;
+
+    setIsProcessing(true);
     setPlaybackError(null);
+
     try {
       const songData = await fetchSongMetadata(cardId);
       setScannedSong(songData);
@@ -24,6 +31,8 @@ function App() {
       console.error("Fehler im Spielablauf:", error);
       setPlaybackError(error.message || "Unerwarteter Fehler beim Abspielen.");
       setView('home'); // Bei Fehler zurück zum Start
+    } finally {
+      setIsProcessing(false);
     }
     
   };
@@ -32,7 +41,7 @@ function App() {
     setPlaybackError(null);
     try {
       await pauseSpotifyTrack(token, deviceId);
-      setView('scanner');
+      setView('home');
     } catch (error) {
       console.error("Fehler im Spielablauf:", error);
       setPlaybackError(error.message || "Unerwarteter Fehler beim Abspielen.");

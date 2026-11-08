@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { SPOTIFY_CONFIG } from '../config/spotify';
 
 export function useSpotifyPlayer (token) {
     const [player, setPlayer] = useState(undefined);
@@ -19,10 +20,28 @@ export function useSpotifyPlayer (token) {
                 volume: 0.5
             });
 
-            spotifyPlayer.addListener('ready', ({ device_id }) => {
+            spotifyPlayer.addListener('ready', async ({ device_id }) => {
                 console.log('Hitstar-Player ist bereit mit Device ID:', device_id);
                 setDeviceId(device_id);
                 setIsReady(true);
+
+                // transfer play to this device ONCE
+                try {
+                    await fetch(SPOTIFY_CONFIG.PLAYER_ENDPOINT, {
+                        method: 'PUT',
+                        headers: {
+                          'Content-Type': 'application/json',
+                          'Authorization': `Bearer ${token}`,
+                        },
+                        body: JSON.stringify({
+                          device_ids: [device_id],
+                          play: false,
+                        }),
+                      });
+                    console.log("Spotify-Audiofokus erfolgreich auf PWA übertragen.");
+                } catch (err) {
+                    console.error("Fehler beim initialen Playback-Transfer:", err);
+                }
             });
 
             spotifyPlayer.addListener('not_ready', ({ device_id }) => {
