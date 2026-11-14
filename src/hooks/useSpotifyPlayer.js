@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { SPOTIFY_CONFIG } from '../config/spotify';
 
-export function useSpotifyPlayer (token) {
+export function useSpotifyPlayer (token, onPlaybackStarted) {
     const [player, setPlayer] = useState(undefined);
     const [deviceId, setDeviceId] = useState(null);
     const [isReady, setIsReady] = useState(false);
+
+    const currentTrackIdRef = useRef(null);
 
     useEffect(() => {
         if (!token) {
@@ -48,6 +50,31 @@ export function useSpotifyPlayer (token) {
                 console.log('Device ID ist offline gegangen:', device_id);
                 setIsReady(false);
             });
+
+            spotifyPlayer.addListener('player_state_changed', (state) => {
+                if (!state) return;
+                
+                const currentTrack = state.track_window?.current_track;
+                const isPlaying = !state.paused && currentTrack;
+
+                if (isPlaying) {
+                    // check whether play was already triggered for this specific track
+                    if (currentTrackIdRef.current !== currentTrack.id) {
+                        console.log("Audio-Stream läuft offiziell für Song-ID:", currentTrack.name);
+                        
+                        currentTrackIdRef.current = currentTrack.id; // mark song as active
+                        
+                        // should fire only once
+                        if (onPlaybackStarted) {
+                            onPlaybackStarted();
+                        }
+                    }
+                } else if (state.paused) {
+                    // reset id if paused or state changed to paused
+                    currentTrackIdRef.current = null;
+                }
+            });
+
 
             spotifyPlayer.addListener('initialization_error', ({ message }) => {
                 console.error('Spotify Init Fehler:', message);

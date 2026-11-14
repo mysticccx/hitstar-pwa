@@ -12,9 +12,12 @@ dist
 dist-ssr
 *.local
 .env
+.cache
 
 # Editor directories and files
 .vercel
+.venv
+.python-version
 .vscode/*
 !.vscode/extensions.json
 .idea

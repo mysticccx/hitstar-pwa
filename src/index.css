@@ -9,3 +9,19 @@ body,
   min-height: 100dvh;
   overflow: hidden;
 }
+
+/* src/index.css */
+
+@keyframes svg-diagonal-scroll {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    /* Muss exakt der width/height des <pattern> entsprechen (120px) */
+    transform: translate(120px, 120px);
+  }
+}
+
+.animate-svg-scroll {
+  animation: svg-diagonal-scroll 6s linear infinite;
+}

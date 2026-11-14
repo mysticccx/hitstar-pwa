@@ -1,14 +1,740 @@
 {
   "HITS-001": {
-    "spotify_id": "5ubvP9oKmxLUVq506fgLhk",
-    "title": "Stayin Alive",
+    "spotify_id": "3pf96IFggfQuT6Gafqx2rt",
+    "title": "Sunny",
+    "artist": "Boney M.",
+    "year": 1976
+  },
+  "HITS-002": {
+    "spotify_id": "1Rm3BOAEtg8KF2EoW6LdMR",
+    "title": "Jeans On",
+    "artist": "David Dundas",
+    "year": 2022
+  },
+  "HITS-003": {
+    "spotify_id": "5yr8pi3uCjTYOnTqstBBdm",
+    "title": "Let's Get It On",
+    "artist": "Marvin Gaye",
+    "year": 2023
+  },
+  "HITS-004": {
+    "spotify_id": "2tH28YyKYOldxhuBHoI79M",
+    "title": "Just the Two of Us (feat. Bill Withers) - Edit",
+    "artist": "Grover Washington, Jr., Bill Withers",
+    "year": 1994
+  },
+  "HITS-005": {
+    "spotify_id": "5eFiEFtrq5dLgVHSZANUNl",
+    "title": "Together Forever",
+    "artist": "Rick Astley",
+    "year": 1987
+  },
+  "HITS-006": {
+    "spotify_id": "4jDmJ51x1o9NZB5Nxxc7gY",
+    "title": "Careless Whisper",
+    "artist": "George Michael",
+    "year": 1998
+  },
+  "HITS-007": {
+    "spotify_id": "7m0V39HnYw4pKovBlrmZZf",
+    "title": "Monday Struggle",
+    "artist": "Albert Ammons",
+    "year": 2000
+  },
+  "HITS-008": {
+    "spotify_id": "4PTG3Z6ehGkBFwjybzWkR8",
+    "title": "Never Gonna Give You Up",
+    "artist": "Rick Astley",
+    "year": 1987
+  },
+  "HITS-009": {
+    "spotify_id": "70C4NyhjD5OZUMzvWZ3njJ",
+    "title": "Piano Man",
+    "artist": "Billy Joel",
+    "year": 1973
+  },
+  "HITS-010": {
+    "spotify_id": "0bRXwKfigvpKZUurwqAlEh",
+    "title": "Lovely Day",
+    "artist": "Bill Withers",
+    "year": 1977
+  },
+  "HITS-011": {
+    "spotify_id": "7K8QsHbmUpSX37oOCL4e2g",
+    "title": "Kung Fu Fighting",
+    "artist": "Carl Douglas",
+    "year": 1974
+  },
+  "HITS-012": {
+    "spotify_id": "0B5kY9i9bmP7554oU4jRoO",
+    "title": "Funkytown - Single Version",
+    "artist": "Lipps Inc.",
+    "year": 2007
+  },
+  "HITS-013": {
+    "spotify_id": "5X6VbizePQKSnt55YWWyGS",
+    "title": "The Lion Sleeps Tonight",
+    "artist": "The Tokens",
+    "year": 1970
+  },
+  "HITS-014": {
+    "spotify_id": "05wIrZSwuaVWhcv5FfqeH0",
+    "title": "Walking On Sunshine",
+    "artist": "Katrina & The Waves",
+    "year": 1985
+  },
+  "HITS-015": {
+    "spotify_id": "0ikz6tENMONtK6qGkOrU3c",
+    "title": "Wake Me Up Before You Go-Go",
+    "artist": "Wham!",
+    "year": 1984
+  },
+  "HITS-016": {
+    "spotify_id": "5zA8vzDGqPl2AzZkEYQGKh",
+    "title": "Uptown Girl",
+    "artist": "Billy Joel",
+    "year": 1983
+  },
+  "HITS-017": {
+    "spotify_id": "7ev0d8xxlmTLZBmHWHdMjt",
+    "title": "Vielen Dank für die Blumen",
+    "artist": "Udo Jürgens",
+    "year": 2009
+  },
+  "HITS-018": {
+    "spotify_id": "0qRR9d89hIS0MHRkQ0ejxX",
+    "title": "Rich Girl",
+    "artist": "Daryl Hall & John Oates",
+    "year": 1976
+  },
+  "HITS-019": {
+    "spotify_id": "6W0tadR4h853lh9emTqwyp",
+    "title": "Don't You Worry 'Bout a Thing",
+    "artist": "Incognito",
+    "year": 1992
+  },
+  "HITS-020": {
+    "spotify_id": "2hYAtnubB0xBHm5SBgJRHb",
+    "title": "Always There - David Morales Remix",
+    "artist": "Incognito",
+    "year": 2000
+  },
+  "HITS-021": {
+    "spotify_id": "6bv2nzkv7RrGSKZAS5IJNi",
+    "title": "Still A Friend Of Mine",
+    "artist": "Incognito",
+    "year": 1993
+  },
+  "HITS-022": {
+    "spotify_id": "1tfZtA15BfJHQTUy3dqTKC",
+    "title": "Build Me Up Buttercup - Mono",
+    "artist": "The Foundations",
+    "year": 1967
+  },
+  "HITS-023": {
+    "spotify_id": "7aJZxI6TVdIvQSuWxQ4rqp",
+    "title": "I Can See Clearly Now",
+    "artist": "Jimmy Cliff",
+    "year": 2002
+  },
+  "HITS-024": {
+    "spotify_id": "2grjqo0Frpf2okIBiifQKs",
+    "title": "September",
+    "artist": "Earth, Wind & Fire",
+    "year": 1978
+  },
+  "HITS-025": {
+    "spotify_id": "5LYJ631w9ps5h9tdvac7yP",
+    "title": "Easy Lover",
+    "artist": "Philip Bailey, Phil Collins",
+    "year": 1984
+  },
+  "HITS-026": {
+    "spotify_id": "7KDCuqrHJ66MGogGrdFj4e",
+    "title": "Don't You Worry 'Bout A Thing",
+    "artist": "Incognito",
+    "year": 1992
+  },
+  "HITS-027": {
+    "spotify_id": "0z0JSkE5Nw3i3nin3BBSuG",
+    "title": "Sunshine Reggae",
+    "artist": "Laid Back",
+    "year": 2008
+  },
+  "HITS-028": {
+    "spotify_id": "4uLU6hMCjMI75M1A2tKUQC",
+    "title": "Never Gonna Give You Up",
+    "artist": "Rick Astley",
+    "year": 1987
+  },
+  "HITS-029": {
+    "spotify_id": "2cFl7utlqyZjCXN1G5nRvA",
+    "title": "Stuck With You",
+    "artist": "Huey Lewis & The News",
+    "year": 1986
+  },
+  "HITS-030": {
+    "spotify_id": "3LIaJyHeA9lxmskbFaez44",
+    "title": "Lay All Your Love On Me",
+    "artist": "ABBA",
+    "year": 1980
+  },
+  "HITS-031": {
+    "spotify_id": "000V86A5s6gAGp73ucRnmD",
+    "title": "Sunny (feat. Connor Price)",
+    "artist": "Boney M., Connor Price",
+    "year": 2023
+  },
+  "HITS-032": {
+    "spotify_id": "76HKOVWqsEg26SECtmw7Rz",
+    "title": "The Way You Make Me Feel - 2012 Remaster",
+    "artist": "Michael Jackson",
+    "year": 1987
+  },
+  "HITS-033": {
+    "spotify_id": "0GjEhVFGZW8afUYGChu3Rr",
+    "title": "Dancing Queen",
+    "artist": "ABBA",
+    "year": 1976
+  },
+  "HITS-034": {
+    "spotify_id": "17OqI90oTFZ3J8PVu6j07V",
+    "title": "Voulez-Vous",
+    "artist": "ABBA",
+    "year": 1979
+  },
+  "HITS-035": {
+    "spotify_id": "2zUKhXh78KzEnC7NzigNjn",
+    "title": "Ich fühl' mich Disco",
+    "artist": "Christian Steiffen",
+    "year": 2013
+  },
+  "HITS-036": {
+    "spotify_id": "1wAfRQ0q2FlWaKPpqedjUR",
+    "title": "D.I.S.C.O.",
+    "artist": "Ottawan",
+    "year": 1980
+  },
+  "HITS-037": {
+    "spotify_id": "4UDmDIqJIbrW0hMBQMFOsM",
+    "title": "Stayin' Alive",
     "artist": "Bee Gees",
     "year": 1977
   },
-  "HITS-002": {
+  "HITS-038": {
+    "spotify_id": "1mMYaXpT65iZDtvfRA9EkE",
+    "title": "Fresh",
+    "artist": "Kool & The Gang",
+    "year": 1984
+  },
+  "HITS-039": {
+    "spotify_id": "2NVpYQqdraEcQwqT7GhUkh",
+    "title": "Ain't Nobody",
+    "artist": "Chaka Khan",
+    "year": 1996
+  },
+  "HITS-040": {
+    "spotify_id": "6DBqULxLjq66GX2dim7opR",
+    "title": "The Outsider",
+    "artist": "Lack Of Afro",
+    "year": 2007
+  },
+  "HITS-041": {
+    "spotify_id": "4cgjA7B4fJBHyB9Ya2bu0t",
+    "title": "Human Nature",
+    "artist": "Michael Jackson",
+    "year": 1982
+  },
+  "HITS-042": {
+    "spotify_id": "2epbL7s3RFV81K5UhTgZje",
+    "title": "Lemon Tree",
+    "artist": "Fools Garden",
+    "year": 1995
+  },
+  "HITS-043": {
+    "spotify_id": "1NCuYqMc8hKMb4cpNTcJbD",
+    "title": "Another Day in Paradise - 2016 Remaster",
+    "artist": "Phil Collins",
+    "year": 1989
+  },
+  "HITS-044": {
+    "spotify_id": "1ZEOIhSn6BKErV59bIgn76",
+    "title": "California Dreamin'",
+    "artist": "The Mamas & The Papas",
+    "year": 2001
+  },
+  "HITS-045": {
+    "spotify_id": "5pSvjjfsh34sLrkYSNGCl4",
+    "title": "Down Under",
+    "artist": "Men At Work",
+    "year": 1981
+  },
+  "HITS-046": {
+    "spotify_id": "5ayicakbGkOJJLW26HJ8Rg",
+    "title": "Our House",
+    "artist": "Madness",
+    "year": 1982
+  },
+  "HITS-047": {
+    "spotify_id": "2WfaOiMkCvy7F5fcp2zZ8L",
+    "title": "Take on Me",
+    "artist": "a-ha",
+    "year": 1985
+  },
+  "HITS-048": {
+    "spotify_id": "4POgt5ayni68MeLqclubcC",
+    "title": "Red Red Wine",
+    "artist": "UB40",
+    "year": 1987
+  },
+  "HITS-049": {
     "spotify_id": "7J1uxwnxfQLu4APicE5Rnj",
     "title": "Billie Jean",
     "artist": "Michael Jackson",
+    "year": 1982
+  },
+  "HITS-050": {
+    "spotify_id": "5O4erNlJ74PIF6kGol1ZrC",
+    "title": "Could You Be Loved",
+    "artist": "Bob Marley & The Wailers",
+    "year": 1980
+  },
+  "HITS-051": {
+    "spotify_id": "2EgAR5nu2dSuT2L9zecdbB",
+    "title": "The Lion Sleeps Tonight",
+    "artist": "Tight Fit",
+    "year": 1982
+  },
+  "HITS-052": {
+    "spotify_id": "5vmRQ3zELMLUQPo2FLQ76x",
+    "title": "Smalltown Boy",
+    "artist": "Bronski Beat",
+    "year": 1984
+  },
+  "HITS-053": {
+    "spotify_id": "5lA3pwMkBdd24StM90QrNR",
+    "title": "P.Y.T. (Pretty Young Thing)",
+    "artist": "Michael Jackson",
+    "year": 2008
+  },
+  "HITS-054": {
+    "spotify_id": "1Hv1VTm8zeOeybub15mA2R",
+    "title": "Smooth Operator - Single Version",
+    "artist": "Sade",
+    "year": 1994
+  },
+  "HITS-055": {
+    "spotify_id": "19wadMw1A8XejDV4p5wMt1",
+    "title": "Didn't We Almost Have It All",
+    "artist": "Whitney Houston",
+    "year": 1987
+  },
+  "HITS-056": {
+    "spotify_id": "2pAdtQuiEVGr7nOXGiv7t4",
+    "title": "If This Is It",
+    "artist": "Huey Lewis & The News",
+    "year": 1983
+  },
+  "HITS-057": {
+    "spotify_id": "0S5EEpFAHcT7cm5XOASc29",
+    "title": "Love Never Felt So Good",
+    "artist": "Michael Jackson",
+    "year": 2014
+  },
+  "HITS-058": {
+    "spotify_id": "3yBlJtq86wROQpHi1goEKT",
+    "title": "Dirty Diana - 2012 Remaster",
+    "artist": "Michael Jackson",
+    "year": 2012
+  },
+  "HITS-059": {
+    "spotify_id": "5vdp5UmvTsnMEMESIF2Ym7",
+    "title": "Another One Bites The Dust - Remastered 2011",
+    "artist": "Queen",
+    "year": 1980
+  },
+  "HITS-060": {
+    "spotify_id": "3Ud6fFep5ZlXzRWw6Sm8no",
+    "title": "Walk Of Life",
+    "artist": "Dire Straits",
+    "year": 1985
+  },
+  "HITS-061": {
+    "spotify_id": "3Z2tPWiNiIpg8UMMoowHIk",
+    "title": "We Are The World",
+    "artist": "U.S.A. For Africa",
+    "year": 1985
+  },
+  "HITS-062": {
+    "spotify_id": "3vkQ5DAB1qQMYO4Mr9zJN6",
+    "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+    "artist": "ABBA",
+    "year": 1979
+  },
+  "HITS-063": {
+    "spotify_id": "2TxCwUlqaOH3TIyJqGgR91",
+    "title": "Mamma Mia",
+    "artist": "ABBA",
+    "year": 1975
+  },
+  "HITS-064": {
+    "spotify_id": "2374M0fQpWi3dLnB54qaLX",
+    "title": "Africa",
+    "artist": "TOTO",
+    "year": 1982
+  },
+  "HITS-065": {
+    "spotify_id": "2tUBqZG2AbRi7Q0BIrVrEj",
+    "title": "I Wanna Dance with Somebody (Who Loves Me)",
+    "artist": "Whitney Houston",
+    "year": 1987
+  },
+  "HITS-066": {
+    "spotify_id": "65kKvpTuhJAVxyFPlKuOAd",
+    "title": "You to Me Are Everything",
+    "artist": "The Real Thing",
+    "year": 1976
+  },
+  "HITS-067": {
+    "spotify_id": "2stkLJ0JNcXkIRDNF3ld6c",
+    "title": "You've Got a Friend in Me",
+    "artist": "Randy Newman",
+    "year": 1995
+  },
+  "HITS-068": {
+    "spotify_id": "4S1VYqwfkLit9mKVY3MXoo",
+    "title": "Forever Young",
+    "artist": "Alphaville",
+    "year": 1984
+  },
+  "HITS-069": {
+    "spotify_id": "7oOOI85fVQvVnK5ynNMdW7",
+    "title": "Rock with You - Single Version",
+    "artist": "Michael Jackson",
+    "year": 1979
+  },
+  "HITS-070": {
+    "spotify_id": "0PDCewmZCp0P5s00bptcdd",
+    "title": "This Will Be (An Everlasting Love)",
+    "artist": "Natalie Cole",
+    "year": 1975
+  },
+  "HITS-071": {
+    "spotify_id": "2mQAEGJforwYykwmMIvSLo",
+    "title": "Part-Time Lover - Single Version",
+    "artist": "Stevie Wonder",
+    "year": 2007
+  },
+  "HITS-072": {
+    "spotify_id": "1OOtq8tRnDM8kG2gqUPjAj",
+    "title": "Beat It",
+    "artist": "Michael Jackson",
+    "year": 2008
+  },
+  "HITS-073": {
+    "spotify_id": "4NH4xiPQ7TqNGqj6pZV4ki",
+    "title": "Karma Chameleon",
+    "artist": "Culture Club",
+    "year": 1989
+  },
+  "HITS-074": {
+    "spotify_id": "3FvQH46A4B37eNHjooIXcu",
+    "title": "Bad",
+    "artist": "Michael Jackson",
+    "year": 1995
+  },
+  "HITS-075": {
+    "spotify_id": "2aEuA8PSqLa17Y4hKPj5rr",
+    "title": "Cheri Cheri Lady",
+    "artist": "Modern Talking",
+    "year": 1985
+  },
+  "HITS-076": {
+    "spotify_id": "2JCTiiJQFWQNC0Zp8rsJRB",
+    "title": "(I've Had) The Time Of My Life - theme from the motion picture \"Dirty Dancing\"",
+    "artist": "Bill Medley, Jennifer Warnes",
+    "year": 1988
+  },
+  "HITS-077": {
+    "spotify_id": "0Q6mJSyGsUmg9WXgOcOf7A",
+    "title": "Maniac - From \"Flashdance\"",
+    "artist": "Michael Sembello",
+    "year": 2023
+  },
+  "HITS-078": {
+    "spotify_id": "1di1BEgJYzPvXUuinsYJGP",
+    "title": "Everybody (Backstreet's Back) - Radio Edit",
+    "artist": "Backstreet Boys",
+    "year": 1997
+  },
+  "HITS-079": {
+    "spotify_id": "0vB4Vd6PtkJSEnWsmqATnZ",
+    "title": "Nothing's Gonna Change My Love for You",
+    "artist": "George Benson",
+    "year": 1985
+  },
+  "HITS-080": {
+    "spotify_id": "52QRIheaefNCUA4HdEGpAo",
+    "title": "Lady Love Me (One More Time)",
+    "artist": "George Benson",
+    "year": 1983
+  },
+  "HITS-081": {
+    "spotify_id": "47igaFgsiP4feN73cHnYOC",
+    "title": "Feel Like Making Love",
+    "artist": "George Benson",
+    "year": 1983
+  },
+  "HITS-082": {
+    "spotify_id": "6a899bXlCuViXW2Qs8Rdqo",
+    "title": "Turn Your Love Around",
+    "artist": "George Benson",
+    "year": 2009
+  },
+  "HITS-083": {
+    "spotify_id": "50cZJ9FB4U0qDHd4hywCG0",
+    "title": "You Are the Love of My Life",
+    "artist": "George Benson, Roberta Flack",
+    "year": 1985
+  },
+  "HITS-084": {
+    "spotify_id": "5gaUkg5JNk8c4mr2jnpX8H",
+    "title": "Give Me the Night",
+    "artist": "George Benson",
+    "year": 1980
+  },
+  "HITS-085": {
+    "spotify_id": "1nHN3m6EzCzKAmDgwoLBMD",
+    "title": "In Your Eyes",
+    "artist": "George Benson",
+    "year": 1983
+  },
+  "HITS-086": {
+    "spotify_id": "5uihlhYwR3rtC5ca6gbMny",
+    "title": "The World Is a Ghetto",
+    "artist": "George Benson",
+    "year": 1977
+  },
+  "HITS-087": {
+    "spotify_id": "1m3BAsNsQAaSNMD2M6vlKY",
+    "title": "Breezin'",
+    "artist": "George Benson",
+    "year": 1976
+  },
+  "HITS-088": {
+    "spotify_id": "6vvIDcqj8Em8OiiRpqfMKe",
+    "title": "Dinorah, Dinorah",
+    "artist": "George Benson",
+    "year": 1980
+  },
+  "HITS-089": {
+    "spotify_id": "34yIb7hw5SuR80au1BHTtt",
+    "title": "Oh Happy Day",
+    "artist": "The Edwin Hawkins Singers",
+    "year": 2001
+  },
+  "HITS-090": {
+    "spotify_id": "4qJKJpLJ7EqKzwL8etMTGX",
+    "title": "More Than A Friend",
+    "artist": "TILAR",
+    "year": 2024
+  },
+  "HITS-091": {
+    "spotify_id": "2ZgdYQXGd1suqd5CtfeW2E",
+    "title": "Unite & Heal",
+    "artist": "TILAR",
+    "year": 2024
+  },
+  "HITS-092": {
+    "spotify_id": "5KgbyD2lQQlIupAaPjgiXg",
+    "title": "Night Fever - From \"Saturday Night Fever\" Soundtrack",
+    "artist": "Bee Gees",
+    "year": 1979
+  },
+  "HITS-093": {
+    "spotify_id": "0Dm43YLUlGdePpSbI1ct8h",
+    "title": "Part-Time Lover",
+    "artist": "Stevie Wonder",
+    "year": 1985
+  },
+  "HITS-094": {
+    "spotify_id": "4aVuWgvD0X63hcOCnZtNFA",
+    "title": "Hold the Line",
+    "artist": "TOTO",
+    "year": 1978
+  },
+  "HITS-095": {
+    "spotify_id": "5IKLwqBQG6KU6MP2zP80Nu",
+    "title": "We Are Family - 1995 Remaster",
+    "artist": "Sister Sledge",
+    "year": 1979
+  },
+  "HITS-096": {
+    "spotify_id": "1k1Bqnv2R0uJXQN4u6LKYt",
+    "title": "Ain't No Sunshine",
+    "artist": "Bill Withers",
+    "year": 1971
+  },
+  "HITS-097": {
+    "spotify_id": "4czNORk5MjW5WOn98bki32",
+    "title": "All Night Long (All Night) - Single Version",
+    "artist": "Lionel Richie",
+    "year": 1992
+  },
+  "HITS-098": {
+    "spotify_id": "1kIu9zpYtWjgrLlsactlna",
+    "title": "Jump (Original Mix)",
+    "artist": "The Pointer Sisters",
+    "year": 1983
+  },
+  "HITS-099": {
+    "spotify_id": "1TfqLAPs4K3s2rJMoCokcS",
+    "title": "Sweet Dreams (Are Made of This) - 2005 Remaster",
+    "artist": "Eurythmics, Annie Lennox, Dave Stewart",
+    "year": 1983
+  },
+  "HITS-100": {
+    "spotify_id": "4J7EocpVLUZSU3m6E7O6re",
+    "title": "Aber bitte mit Sahne",
+    "artist": "Udo Jürgens",
+    "year": 1983
+  },
+  "HITS-101": {
+    "spotify_id": "5JSzcnZbYk3qv3nEn5Bo41",
+    "title": "Über den Wolken",
+    "artist": "Reinhard Mey",
+    "year": 1983
+  },
+  "HITS-102": {
+    "spotify_id": "6XMn6IKd4WPfBclWsxWe2q",
+    "title": "Beyond the Sea (La Mer)",
+    "artist": "George Benson",
+    "year": 1985
+  },
+  "HITS-103": {
+    "spotify_id": "7bIAkxPdLTidVRQDX172vp",
+    "title": "Lady",
+    "artist": "George Benson",
+    "year": 1976
+  },
+  "HITS-104": {
+    "spotify_id": "1Gnufs5iuI3h5ow29J7tOO",
+    "title": "Love X Love",
+    "artist": "George Benson",
+    "year": 1980
+  },
+  "HITS-105": {
+    "spotify_id": "1mOIOim4QHFVKavrJQ8G90",
+    "title": "Schickeria",
+    "artist": "Spider Murphy Gang",
+    "year": 1981
+  },
+  "HITS-106": {
+    "spotify_id": "2xiOdusRnZezQok1RgLNeS",
+    "title": "You Should Be Dancing",
+    "artist": "Bee Gees",
+    "year": 1976
+  },
+  "HITS-107": {
+    "spotify_id": "1XWIZv5nDOPH80qPlTQjxE",
+    "title": "Soulful Strut",
+    "artist": "George Benson",
+    "year": 1979
+  },
+  "HITS-108": {
+    "spotify_id": "3Jy69dyqTk6uvczwpvyPYO",
+    "title": "Footin' It",
+    "artist": "George Benson",
+    "year": 1968
+  },
+  "HITS-109": {
+    "spotify_id": "4nHbN1M7Nx3GZYpbGFfjda",
+    "title": "Six to Four",
+    "artist": "George Benson",
+    "year": 1976
+  },
+  "HITS-110": {
+    "spotify_id": "7Ekgay9AUlIXrCcR0bnRkB",
+    "title": "Love Is Blue (feat. The Robert Farnon Orchestra)",
+    "artist": "George Benson, The Robert Farnon Orchestra",
+    "year": 2024
+  },
+  "HITS-111": {
+    "spotify_id": "2olVm1lHicpveMAo4AUDRB",
+    "title": "The Power Of Love",
+    "artist": "Huey Lewis & The News",
+    "year": 2006
+  },
+  "HITS-112": {
+    "spotify_id": "3koCCeSaVUyrRo3N2gHrd8",
+    "title": "Let's Groove",
+    "artist": "Earth, Wind & Fire",
+    "year": 1981
+  },
+  "HITS-113": {
+    "spotify_id": "1jDJFeK9x3OZboIAHsY9k2",
+    "title": "I'm Still Standing",
+    "artist": "Elton John",
+    "year": 1983
+  },
+  "HITS-114": {
+    "spotify_id": "7HW5WIw7ZgZORCzUxv5gW5",
+    "title": "Don't Go Breaking My Heart",
+    "artist": "Elton John, Kiki Dee",
+    "year": 1975
+  },
+  "HITS-115": {
+    "spotify_id": "5LxvwujISqiB8vpRYv887S",
+    "title": "I Want You Back",
+    "artist": "The Jackson 5",
+    "year": 1969
+  },
+  "HITS-116": {
+    "spotify_id": "24SUWisv2lYQiB3bVpE1sn",
+    "title": "Virtual Insanity",
+    "artist": "Jamiroquai",
+    "year": 1999
+  },
+  "HITS-117": {
+    "spotify_id": "4Ntxm9RtVXvj1wC8c26fpl",
+    "title": "Early A.M. Attitude",
+    "artist": "Dave Grusin, Lee Ritenour",
+    "year": 1985
+  },
+  "HITS-118": {
+    "spotify_id": "49X0LAl6faAusYq02PRAY6",
+    "title": "Lady (Hear Me Tonight)",
+    "artist": "Modjo",
+    "year": 2001
+  },
+  "HITS-119": {
+    "spotify_id": "3NlLmKBJozwoi0k03Feb1N",
+    "title": "Isn't She Lovely",
+    "artist": "Stevie Wonder",
+    "year": 2002
+  },
+  "HITS-120": {
+    "spotify_id": "0cGG2EouYCEEC3xfa0tDFV",
+    "title": "Tainted Love",
+    "artist": "Soft Cell",
+    "year": 1981
+  },
+  "HITS-121": {
+    "spotify_id": "1XcyciZOU2UcFgvSlFazeW",
+    "title": "No Doubt About It",
+    "artist": "Hot Chocolate",
+    "year": 1987
+  },
+  "HITS-122": {
+    "spotify_id": "4GhtDORJiSRYxj6M1bv0vX",
+    "title": "Love Really Hurts Without You",
+    "artist": "Billy Ocean",
+    "year": 1976
+  },
+  "HITS-123": {
+    "spotify_id": "2YeymL3Kn5y43vJOO2rhmW",
+    "title": "It Started with a Kiss - 2011 Remaster",
+    "artist": "Hot Chocolate",
     "year": 1982
   }
 }
