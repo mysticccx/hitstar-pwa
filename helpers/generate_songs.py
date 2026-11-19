@@ -1,5 +1,6 @@
 import json
 import os
+import random
 import spotipy
 from dotenv import load_dotenv
 from spotipy.oauth2 import SpotifyClientCredentials
@@ -18,6 +19,16 @@ CLIENT_SECRET = os.environ.get("SPOTIPY_CLIENT_SECRET")
 
 # 2. DIE ID DEINER PLAYLIST
 PLAYLIST_ID = "0ZGV7fs4mUUaG48LIO7vq4"
+
+def random_color():
+    r = random.randint(40, 255)
+    g = random.randint(40, 255)
+    b = random.randint(40, 255)
+
+    col = (r, g, b)
+    ccol = (255 - r, 255 - g, 255 - b)
+
+    return (col, ccol)
 
 def main():
     if USER_ACCESS_TOKEN == "HIER_DEN_KOPIERTEN_TOKEN_VON_localhost_EINSETZEN":
@@ -64,12 +75,16 @@ def main():
             # Generiere deine eigene Karten-ID (z.B. HITS-001, HITS-002)
             card_id = f"HITS-{card_counter:03d}"
 
+            (col1, col2) = random_color()
+
             # In die Struktur einpflegen
             songs_dict[card_id] = {
                 "spotify_id": track_id,
                 "title": title,
                 "artist": artist,
-                "year": year
+                "year": year,
+                "col1": col1,
+                "col2": col2
             }
             
             card_counter += 1
